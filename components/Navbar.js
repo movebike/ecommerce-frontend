@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 export default function Navbar () {
   return (
@@ -14,12 +15,15 @@ export default function Navbar () {
               <a className='nav-link active' aria-current='page' href='#'>Login</a>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='/cart'>
-                <div className='items-cart'>
-                  <img src='/cart-nav.svg' alt='' />
-                  <div className='items-quantity'>0</div>
-                </div>
-              </a>
+              <Link href='/cart'>
+                <a className='nav-link'>
+                  <div className='items-cart'>
+                    <img src='/cart-nav.svg' alt='' />
+                    <div className='items-quantity'>0</div>
+                  </div>
+                </a>
+              </Link>
+
             </li>
           </ul>
         </div>
